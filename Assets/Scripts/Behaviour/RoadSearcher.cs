@@ -24,7 +24,6 @@ public class RoadSearcher : MonoBehaviour
     private void Start()
     {
         TILE_OFFSET = new Vector3(.5f, .5f, 0);
-        Debug.Log(TILE_OFFSET);
         PregenerateAllNodes();
     }
 
@@ -39,7 +38,7 @@ public class RoadSearcher : MonoBehaviour
         Vector3Int cellFrom = _roadMap.WorldToCell(from);
         Vector3Int cellTo = _roadMap.WorldToCell(to);
 
-        Node2D fromNode = _nodeEdge.Find(node => node.CellPos.x == cellFrom.x && node.CellPos.y == cellFrom.y);
+        Node2D fromNode = _nodeHeap.Find(node => node.CellPos.x == cellFrom.x && node.CellPos.y == cellFrom.y);
         if (fromNode == null)
         {
             Debug.LogWarning("Start position is not visible");
@@ -107,7 +106,6 @@ public class RoadSearcher : MonoBehaviour
                 }
             }
         }
-        Debug.Log("nodes: " + _nodeHeap.Count);
     }
 
     private Road GenerateRoadFromNodes(Node2D fromNode)

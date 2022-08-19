@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Walker : MonoBehaviour
 {
-    [SerializeField] private string _name;
     [SerializeField] private float _speed;
     [SerializeField] private RoadSearcher _searcher;
     private static float CLOSE_DISTANCE = 0.01f;
@@ -25,6 +24,8 @@ public class Walker : MonoBehaviour
                 else
                 {
                     _hasRoad = false;
+                    Debug.Log("Reached the end of the road");
+                    return;
                 }
             }
             Move(_currentDestination);
@@ -48,16 +49,18 @@ public class Walker : MonoBehaviour
             _currentRoad = new Road(road);
             _currentDestination = _currentRoad.WaypointsWorld.Dequeue();
             _hasRoad = true;
+            Debug.Log("Road found. Moving to " + room.Name);
         }
         else
         {
             _hasRoad = false;
+            Debug.Log("Road did not find. Can't move to " + room.Name);
         }
     }
 
     private void Move(Vector3 pos)
     {
-        transform.position = OneStepForwardTo(pos);
+        transform.parent.transform.position = OneStepForwardTo(pos);
     }
 
     private Vector3 OneStepForwardTo(Vector3 pos)

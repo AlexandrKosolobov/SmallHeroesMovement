@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: walker
-  _speed: 3
+  _speed: 5
   _searcher: {fileID: 0}
 --- !u!1001 &7432017524021928318
 PrefabInstance:

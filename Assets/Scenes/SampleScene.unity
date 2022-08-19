@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6109f2e18e5c3ef48b510e5983ed3ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 
+  _name: Barrack
   _id: 0
 --- !u!1001 &299808998
 PrefabInstance:
@@ -250,7 +250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6728790719240133537, guid: 47604d319823f8f43aeef5554f91bf47, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.5
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 6728790719240133537, guid: 47604d319823f8f43aeef5554f91bf47, type: 3}
       propertyPath: m_LocalPosition.z
@@ -351,7 +351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6109f2e18e5c3ef48b510e5983ed3ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 
+  _name: Lord Chamber
   _id: 0
 --- !u!1 &519420028
 GameObject:
@@ -3439,11 +3439,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6728790719240133537, guid: 47604d319823f8f43aeef5554f91bf47, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.5
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6728790719240133537, guid: 47604d319823f8f43aeef5554f91bf47, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6728790719240133537, guid: 47604d319823f8f43aeef5554f91bf47, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3539,7 +3539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6109f2e18e5c3ef48b510e5983ed3ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 
+  _name: Kitchen
   _id: 0
 --- !u!1001 &1856140912
 PrefabInstance:
@@ -3554,11 +3554,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2245921608900788906, guid: fdb183f506f73254f8536cd5364d8da2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.5
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 2245921608900788906, guid: fdb183f506f73254f8536cd5364d8da2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.5
+      value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: 2245921608900788906, guid: fdb183f506f73254f8536cd5364d8da2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3666,5 +3666,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6109f2e18e5c3ef48b510e5983ed3ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 
+  _name: Storage
   _id: 0
