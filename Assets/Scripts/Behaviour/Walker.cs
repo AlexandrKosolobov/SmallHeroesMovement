@@ -44,17 +44,17 @@ public class Walker : MonoBehaviour
     public void Walk(Room room)
     {
         Road road = _searcher.FindRoadFromTo(transform.position, room.transform.position);
-        if (road != null)
+        if (road == null || road.WaypointsWorld.Count < 2)
+        {
+            _hasRoad = false;
+            Debug.Log("Road did not find. Can't move to " + room.Name);
+        }
+        else
         {
             _currentRoad = new Road(road);
             _currentDestination = _currentRoad.WaypointsWorld.Dequeue();
             _hasRoad = true;
             Debug.Log("Road found. Moving to " + room.Name);
-        }
-        else
-        {
-            _hasRoad = false;
-            Debug.Log("Road did not find. Can't move to " + room.Name);
         }
     }
 

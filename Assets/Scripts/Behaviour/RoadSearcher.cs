@@ -59,8 +59,10 @@ public class RoadSearcher : MonoBehaviour
             _nodeEdge = _nodeHeap.FindAll(node => node.Status == Node2D.Node2DStatus.EDGE);
             WaveDoStep(_nodeEdge);
         }
-
-        return GenerateRoadFromNodes(fromNode);
+    
+        Road road = GenerateRoadFromNodes(fromNode);
+        ResetAllNodes();
+        return road;
     }
 
     private void WaveDoStep(List<Node2D> waveEdge)
@@ -106,6 +108,16 @@ public class RoadSearcher : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void ResetAllNodes()
+    {
+        foreach (Node2D node in _nodeHeap)
+        {
+            node.Status = Node2D.Node2DStatus.NOT_VISITED;
+            node.PrevNode = null;
+        }
+        _nodeEdge.Clear();
     }
 
     private Road GenerateRoadFromNodes(Node2D fromNode)

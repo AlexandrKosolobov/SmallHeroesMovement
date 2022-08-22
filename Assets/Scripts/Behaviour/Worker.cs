@@ -30,9 +30,18 @@ public class Worker : MonoBehaviour
 
     private void DoNextAction()
     {
-        if (lastTimeCheck == 7) Work();
-        else if (lastTimeCheck == 18) Rest();
-        else if (lastTimeCheck == 22) Sleep();
+        if (lastTimeCheck == 7) 
+        {
+            Work();
+        }
+        else if (lastTimeCheck == 15) 
+        {
+            Rest();
+        }
+        else if (lastTimeCheck == 22) 
+        {
+            Sleep();
+        }
     }
 
     private void Work()
